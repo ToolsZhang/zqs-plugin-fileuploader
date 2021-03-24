@@ -35,7 +35,7 @@ function rm(path) {
   return new Promise((resolve, reject) => {
     unlink(path, err => {
       if (err) return reject(err);
-      return resolve();
+      return resolve(path);
     });
   });
 }
